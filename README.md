@@ -18,6 +18,14 @@ The objective of the investigation was to:
 
 ---
 
+## **Tools Used**
+
+- Wireshark
+- VirusTotal
+- Open Source Intelligence (OSINT)
+
+---
+
 ## **Investigation Approach**
 
 The analysis followed a structured process:
@@ -26,13 +34,6 @@ The analysis followed a structured process:
 2. Narrowed the scope to specific IP addresses and protocols.
 3. Applied filters to uncover indicators of compromise (IOCs).
 
----
-
-## **Tools Used**
-
-- Wireshark
-- VirusTotal
-- Open Source Intelligence (OSINT)
 
 
 
