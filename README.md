@@ -8,8 +8,7 @@ In this project, I analyzed the file 2024-11-26-traffic-analysis-exercise.pcap2 
 
 The following alerts for NetSupportRAT were triggered:
 
-
-
+![Wireshark 1](screenshots/wireshark1.png)
 
 ## **Investigation Approach**
 
