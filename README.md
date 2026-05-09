@@ -38,7 +38,51 @@ This helped narrow the investigation scope and focus on suspicious:
 
 ![Wireshark 1](wireshark8.png)
 
+Step 2: Following TCP Stream
 
+Once l have discovered the session with the suspicious IP address that triggered the alert, l can right click that packet and “Follow TCP Stream".
+
+![Wireshark 1](wireshark3.png) 
+
+Step 3: Reviewing the HTTP POST Request
+
+By reviewing the header, l discover two interesting entries in the POST request. The first one is the URL 194.180.191.64/fakeurl[.]htm. The second item of interest is the User Agent String, NetSupport Manager.  The NetSupport service is known to be widely abused and used in NetSupportRAT. If your organization does not use this service, this is almost certainly malicious activity.
+
+![Wireshark 1](wireshark4.png) 
+
+Pivoting to open source research, using VirusTotal, l confirm that 194[.]180[.]191[.]64/fakeurl[.]htm is associated with NetSupportRAT malicous activity.
+
+![Wireshark 1](wireshark5.png) 
+![Wireshark 1](wireshark6.png) 
+
+Step 4: Victim Identification
+
+To identify the victim, I applied the following LDAP filter:
+
+```Wireshark
+ ldap contains "givenName"
+```
+
+The analysis revealed the victim user as:
+
+```Wireshark
+ Oliver Boonwall
+```
+![Wireshark 1](wireshark7.png) 
+
+--- 
+
+## **Conclusion**
+
+This investigation demonstrated how Wireshark can be used to:
+
+Analyze PCAP files
+Filter suspicious traffic
+Follow TCP streams
+Identify indicators of compromise
+Investigate malware-related communications
+
+l have demonstrated that Wireshark can be used to analyze pcap files, as well as capture them. 
 
 
 
