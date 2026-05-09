@@ -34,6 +34,8 @@ The analysis followed a structured process:
 2. Narrowed the scope to specific IP addresses and protocols.
 3. Applied filters to uncover indicators of compromise (IOCs).
 
+To begin, open the PCAP file in Wireshark:
+
 
 
 
